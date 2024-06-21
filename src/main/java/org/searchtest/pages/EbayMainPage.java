@@ -37,6 +37,7 @@ public class EbayMainPage {
     public void goToEbayHomePage() {
         driver.get("https://www.ebay.ca");
 
+        // Wait until search button is shown
         wait.until(ExpectedConditions.visibilityOf(searchButton));
     }
 
@@ -78,6 +79,8 @@ public class EbayMainPage {
     public void goToNextPage() {
         WebElement nextPageButton = navPagination.findElement(By.xpath(".//a[@type='next' and contains(@class, 'pagination__next')]"));
         nextPageButton.click();
+
+        // Wait until next set of results are shown.
         wait.until(ExpectedConditions.visibilityOf(searchResultsList));
     }
 
@@ -85,6 +88,7 @@ public class EbayMainPage {
         List<String> suggestionsText = new ArrayList<>();
         List<WebElement> liElements = searchResultsList.findElements(By.xpath(".//li[contains(@class, 's-item')]"));
 
+        // Go through each search result and add the item's name/title to the text array.
         for (WebElement li : liElements) {
             WebElement spanElement = li.findElement(By.xpath(".//span[@role='heading']"));
             suggestionsText.add(spanElement.getText().trim());

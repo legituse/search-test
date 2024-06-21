@@ -71,7 +71,7 @@ public class SearchSteps {
             currentPage++;
         }
 
-        // After attempting navigation also that the page has results
+        // After attempting navigation also verify that the page has results
         int numberOfSearchResults = ebayMainPage.getSearchResultListCount();
         assertTrue("Expected message \"" + searchString + "\" to appear on at least one page", numberOfSearchResults > 1);
     }
