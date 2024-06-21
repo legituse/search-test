@@ -26,7 +26,4 @@ This project demonstrates automated testing of search functionality on eBay usin
     - Checking search suggestions.
 
 ## Note
-- After running the tests, a `cucumber_report.html` is created under the `target` directory for viewing the results in a more organized and detailed manner in a browser.
-
-
-
+- After running the tests, a `cucumber_report.html` is created under the `target` directory for viewing the results in a more organized and detailed manner in a browser. You can view the report for the tests ran locally [here](https://html-preview.github.io/?url=https://github.com/legituse/search-test/blob/main/cucumber_report.html).
